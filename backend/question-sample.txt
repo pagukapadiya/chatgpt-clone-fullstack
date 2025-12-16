@@ -1,0 +1,35 @@
+// Test Cases for User Testing:
+const testQuestions = [
+  // Profit-specific queries
+  "Show me profit data",
+  "What are the profit margins?",
+  "How much profit did we make?",
+  "Profit analysis for last quarter",
+  "Display profit by product",
+  
+  // Sales queries
+  "Show sales figures",
+  "What are the sales numbers?",
+  "Revenue analysis",
+  "Display sales data",
+  
+  // User queries
+  "User statistics",
+  "How many customers do we have?",
+  "Show customer data",
+  
+  // Financial queries
+  "Budget vs actual",
+  "Financial report",
+  "Cost analysis",
+  
+  // Mixed queries
+  "Show me profit and sales data",
+  "Compare profit vs revenue",
+  "What's our profit margin on laptops?",
+  
+  // Conversational queries
+  "Hello, can you help with profit analysis?",
+  "Hi, show me sales metrics",
+  "Thanks for the help with the data"
+];
