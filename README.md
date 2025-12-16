@@ -1,37 +1,109 @@
-# chatgpt-clone-fullstack
-A complete ChatGPT-style web application built with React + TypeScript + TailwindCSS frontend and Node.js + Express + TypeScript backend. Features real-time chat, session management, table data display, dark/light theme toggle, and responsive design for all devices.
+# 📌 ChatGPT Clone Fullstack
 
-🌟 Features
-Frontend (React + TypeScript + TailwindCSS)
-✅ Responsive design for mobile, tablet, and desktop
+A complete **ChatGPT-style web application** built with **React + TypeScript + TailwindCSS** on the frontend and **Node.js + Express + TypeScript** on the backend.
 
-✅ Dark/Light theme toggle with persistence
+This repository provides a real-time AI chat interface with session management, dark/light theme toggle, responsive design, and a clean modern UI.
 
-✅ Collapsible sidebar with session history
+---
 
-✅ Real-time chat interface with typing indicators
+## 🚀 Features
 
-✅ Table data display for structured responses
+### 🖥 Frontend (React + TypeScript + TailwindCSS)
+- Responsive chat interface for all devices
+- Dark/Light theme toggle with persistence
+- Collapsible sidebar with session history
+- Real-time messages with typing indicators
+- Structured data display (tables)
+- Like/Dislike feedback UI
 
-✅ Like/Dislike feedback system
+### 🧠 Backend (Node.js + Express + TypeScript)
+- RESTful API server
+- MVC architecture
+- Input validation
+- Centralized error handling
+- Logging support
 
-✅ Session management with URL-based routing
+---
 
-✅ Clean, modular component architecture
+## 🔧 Tech Stack
 
-Backend (Node.js + Express + TypeScript)
-✅ RESTful API with TypeScript
+| Layer | Technology |
+|-------|------------|
+| Frontend | React, TypeScript, TailwindCSS |
+| Backend | Node.js, Express, TypeScript |
+| API | REST APIs |
+| Styling | TailwindCSS |
+| Packaging | Node/npm |
 
-✅ MVC architecture with clean separation
+---
 
-✅ Repository pattern for data abstraction
+## 📂 Project Structure
 
-✅ Service layer for business logic
+```txt
+chatgpt-clone-fullstack/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── hooks/
+│   │   ├── services/
+│   │   ├── styles/
+│   │   └── main.tsx
+│   ├── index.html
+│   ├── tailwind.config.js
+│   └── vite.config.ts
+│
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── middlewares/
+│   │   ├── utils/
+│   │   └── server.ts
+│   ├── .env
+│   └── tsconfig.json
+│
+└── README.md
+```
 
-✅ Joi validation for input sanitization
+## 📦 Getting Started
 
-✅ Winston logging system
+Follow these steps to run the project locally:
 
-✅ Comprehensive error handling
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/pagukapadiya/chatgpt-clone-fullstack.git
+cd chatgpt-clone-fullstack
+```
 
-✅ Mock data generation with table structures
+### 2️⃣ Install Dependencies
+```bash
+cd frontend
+npm install
+
+cd ../backend
+npm install
+```
+
+### 3️⃣ Environment Variables
+Create a .env file inside the backend folder:
+```bash
+PORT=5000
+NODE_ENV=development
+CORS_ORIGIN=http://localhost:5173
+API_PREFIX=/api
+```
+### 4️⃣ Run the Application
+Start Backend Server
+```bash
+cd backend
+npm run dev
+```
+
+Start Frontend Application
+```bash
+cd frontend
+npm run dev
+```
