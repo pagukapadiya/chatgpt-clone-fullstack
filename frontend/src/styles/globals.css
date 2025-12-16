@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary: 59 130 246;
+        --background: 249 250 251;
+        --foreground: 17 24 39;
+    }
+
+    .dark {
+        --background: 17 24 39;
+        --foreground: 249 250 251;
+    }
+
+    body {
+        @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-gray-100 dark:bg-gray-800;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gray-400 dark:bg-gray-600 rounded-full;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-gray-500 dark:bg-gray-500;
+    }
+}
+
+@layer components {
+    .glass {
+        @apply backdrop-blur-sm bg-white/80 dark:bg-gray-900/80;
+    }
+
+    .gradient-text {
+        @apply bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent;
+    }
+
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .typing-indicator {
+        display: inline-block;
+    }
+
+    .typing-indicator span {
+        @apply bg-gray-400 dark:bg-gray-500;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 2px;
+        animation: typing 1.5s infinite ease-in-out;
+    }
+
+    .typing-indicator span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .typing-indicator span:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .typing-indicator span:nth-child(3) {
+        animation-delay: 0.4s;
+        margin-right: 0;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes typing {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Smooth transitions */
+* {
+    @apply transition-colors duration-200;
+}
